@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+<link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+    function clearText(field) {
+        if (field.defaultValue == field.value) field.value = '';
+        else if (field.value == '') field.value = field.defaultValue;
+    }
+</script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+<div id="templatemo_header">
+            
+    <div id="site_title">
+        
+        <a href="#" target="_parent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We Provide latest laptops for you</a>
+        
+    </div> <!-- end of site_title -->
+    
+   <div id="header_right">
+    
+    	<a href="#"><img src="images/templatemo_twitter.png" alt="twitter" /></a><a href="#"><img src="images/templatemo_rss.png" alt="rss" /></a>
+        
+    
+   </div>
+    
+    <div class="cleaner"></div>
+    
+</div> <!-- end of header -->
+
+<div id="templatemo_menu_wrapper">
+	
+    <div id="templatemo_menu">
+        <ul>
+            <li><a href="Default.aspx"><span></span>Home</a></li>
+            <li><a href="Feedback.aspx"><span></span>Feedback</a></li>
+            <li><a href="Register.aspx"><span></span>Register</a></li>
+            <li><a href="Login.aspx"><span></span>Login</a></li>
+            <li><a href="ForgotPassword.aspx"><span></span>Forgot Password</a></li>
+            <li><a href="Contact.aspx"><span></span>Contact</a></li>
+        </ul>    	
+	</div>
+</div> <!-- end of templatemo_menu -->
+
+
+<div id="templatemo_main"> <span class="tm_bottom"></span>
+	
+<div id="templatemo_content">
+    
+    	<div class="content_box">
+
+    <div>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </div>
+<div class="post_box pb_last">
+            <div class="cleaner"></div>
+        </div>
+    
+    </div>
+    
+    <div id="templatemo_sidebar">
+    	<div class="sidebar_box">
+        	<h3>News Update</h3>
+            <div class="sb_content">
+                        <asp:Repeater ID="Repeater1" runat="server">
+                        <ItemTemplate>
+                        <tr>
+                        <th><%# Eval("newsheading") %></th>
+                        </tr>
+                        <tr>
+                        <td><%# Eval("newscontent") %></td>
+                        </tr>
+                        <br />
+                        <hr />
+                        <br />
+                        </ItemTemplate>
+                        </asp:Repeater>
+                        </div>
+        </div>
+        
+        <div class="sidebar_box">
+        	<h3>Companies</h3>
+            <div class="sb_content">
+            	<ul class="sidebar_menu">
+                    <asp:Repeater ID="Repeater2" runat="server">
+                    <ItemTemplate>
+                    <tr>
+                    <td><%# Eval("company") %></td>
+                    </tr>
+                    </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
+        </div>
+        
+        
+        
+
+    </div>
+    
+    <div class="cleaner"></div>
+</div> <!-- end of main -->
+
+
+<div id="templatemo_footer">
+
+	<ul class="footer_menu">
+        <li class="first"><a href="Default.aspx">Home</a></li>
+        
+        <li><a href="Feedback.aspx">Feedback</a></li>
+        <li><a href="Register.aspx">Register</a></li>
+        <li><a href="Login.aspx">Login</a></li>
+        <li><a href="Contact.aspx">Contact</a></li>
+	</ul>
+    
+	Copyright &copy; 2012 <a href="#">Laptop Gallery</a> | 
+<a href="#" target="_parent">Feedback</a> |
+   <a href="#">Contact</a> 
+    
+</div>
+
+    </form>
+</body>
+</html>

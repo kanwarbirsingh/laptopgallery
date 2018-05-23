@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="admin_site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>DesignHQ</title>
+	<meta name="Robots" content="index,follow" />
+	<meta name="author" content="Netmax Technologies" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../prettyphoto/css/prettyPhoto.css" media="screen" />
+	<script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="../js/core.js"></script>
+	<script type="text/javascript" src="../pngFix/jquery.pngFix.js"></script>
+	<script type="text/javascript" src="../prettyphoto/js/jquery.prettyPhoto.js"></script>
+	<!--[if IE 6]>
+	<style>
+		#pitch .infoline {margin-top:-74px;}
+		.post-options {margin:-55px 0 40px 138px;}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div id="logo">
+			<h1><a href="#">Laptop <span>Gallery</span></a></h1>
+		</div>
+		
+		<div id="content">
+		<!-- main menu -->
+			<ul class="menu" id="jMenu">
+				<li class="current"><a href="Default.aspx">Home</a></li>
+				
+				
+                <li><a href="#">Products</a>
+					<ul>
+						<li><a href="NewProduct.aspx">Add</a></li>
+						<li><a href="ManageProducts.aspx">Manage</a></li>
+						<li><a href="ViewProducts.aspx">View</a></li>
+					</ul>
+				</li>
+				<li><a href="#">News</a>
+					<ul>
+						<li><a href="PublishNews.aspx">Publish</a></li>
+						<li><a href="ManageNews.aspx">Manage</a></li>
+						<li><a href="ViewNews.aspx">View</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Customer</a>
+					<ul>
+						
+						<li><a href="ManageCustomer.aspx">Manage</a></li>
+						<li><a href="ViewCustomer.aspx">View</a></li>
+					</ul>
+				</li>
+                				<li><a href="#">Orders</a>
+					<ul>
+						
+						<li><a href="ViewOrders.aspx">View</a></li>
+					</ul>
+				</li>
+                
+                <li> <a href="../Logout.aspx">Logout</a> </li>
+			</ul>
+			
+			
+			
+			<div class="x"></div>
+			
+			<!-- image slider -->
+			<div id="pitch">
+				<div class="pitch-gallery">
+					<div class="pitch-gallery-holder" id="gallery-pitch-holder">
+					<div class="pitch-gallery-div">
+							<img src="images/1.jpg" alt="Pitch 2" />
+							<div class="infoline">Laptops</div>
+						</div>
+						<div class="pitch-gallery-div">
+							
+                            <img src="images/11.jpg" alt="Pitch 1" />
+							<div class="infoline">Laptops</div>
+						</div>
+						<div class="pitch-gallery-div">
+							<img src="images/111.jpg" alt="Pitch 4" />
+							<div class="infoline">Laptops</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- main content -->
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+<div class="x"></div>
+			<div class="break"></div>
+			
+			<!-- small posts -->
+				<div class="x"></div>
+
+		</div>
+		
+		<!-- footer -->
+		<div id="footer">
+			<p>Copyright &copy; 2012 Laptop Gallery &middot;</p>
+		</div>
+	</div>
+	
+	<!-- gallery starter and prettyPhoto starter -->
+	<script type="text/javascript">
+	    jGallery('pitch');
+	    $(document).pngFix();
+	    $(document).ready(function () {
+	        $("a[rel^='prettyPhoto']").prettyPhoto();
+	    });
+	</script>
+</body>
+</html>
